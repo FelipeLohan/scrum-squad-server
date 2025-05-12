@@ -1,15 +1,14 @@
 import express from "express";
-import cors from "cors";
-import squadRoutes from "./routes/scrumsquadroutes";  
+import squadRouter from "./routes/scrum-squad-routes";
+import scrumRouter from "./routes/scrumsquadroutes";
 
 const app = express();
-const PORT = 3000;
 
-app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 
-app.use("/squad", squadRoutes);  
+app.use(squadRouter);
+app.use(scrumRouter);
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+app.listen(3000, () => {
+  console.log("Servidor rodando na porta 3000");
 });

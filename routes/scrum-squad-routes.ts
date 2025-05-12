@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { postSquad } from "../controllers/scrum-squad-controller";
 
-const router = Router();
+const squadRouter = Router();
 
-router.post("/", postSquad);
+squadRouter.post("/squad", postSquad); 
+export default squadRouter;

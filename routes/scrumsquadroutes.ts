@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { fetchScrumSquads } from "../controllers/scrumsquadcontroller";
 
-const router = Router();
+const scrumRouter = Router();
 
-router.get("/", fetchScrumSquads);
+scrumRouter.get("/squad", fetchScrumSquads);
 
-export default router;
+export default scrumRouter;
